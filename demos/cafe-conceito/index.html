@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Café Aurora: demonstração conceitual de site e cardápio digital para uma cafeteria fictícia. Sem pedidos ou pagamentos reais.">
+  <meta name="theme-color" content="#30251f">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'none'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <title>Café Aurora — um exemplo de boas experiências</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <div class="demo-bar"><span class="demo-dot"></span><strong>Demonstração — negócio fictício</strong><span class="demo-detail">Preços ilustrativos. Nenhuma compra real.</span><button class="demo-about" data-open="about-dialog">Entenda a demo <span aria-hidden="true">↗</span></button></div>
+  <a class="skip-link" href="#cardapio">Ir para o cardápio</a>
+  <header class="site-header wrap">
+    <a class="brand" href="#inicio" aria-label="Café Aurora, início"><span class="brand-symbol" aria-hidden="true">a<span>✳</span></span><span>café aurora<small>BOAS PAUSAS, TODOS OS DIAS.</small></span></a>
+    <nav aria-label="Navegação principal"><a href="#cardapio">Cardápio</a><a href="#experiencia">A experiência</a><button class="nav-cart" id="cart-open" aria-label="Abrir pedido simulado">Sua pausa <span id="cart-count">0</span><span aria-hidden="true">↗</span></button></nav>
+  </header>
+  <main>
+    <section class="hero wrap" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy"><p class="eyebrow"><span></span> CAFÉ FEITO COM CALMA</p><h1 id="hero-title">O dia fica melhor<br>depois de uma<br><em>boa pausa.</em></h1><p class="hero-description">Um café que abraça, um pão quentinho e um momento só seu. Escolha o que combina com a sua pausa.</p><div class="hero-actions"><a class="button dark" href="#cardapio">Explore o cardápio <span aria-hidden="true">↗</span></a><span class="hero-caption">Feito para saborear.<br>Sem nenhuma pressa.</span></div><div class="hero-note"><span class="sun-icon" aria-hidden="true">✳</span><span>Pequenas escolhas.<br><b>Grandes momentos.</b></span></div></div>
+      <div class="hero-art"><img src="./coffee-hero.svg" alt="Ilustração de um café com leite, um croissant e grãos de café sobre uma mesa" width="690" height="680"><div class="art-label"><span class="art-label-icon" aria-hidden="true">✷</span><span>Um pouco de afeto<br><b>em cada xícara.</b></span></div><span class="art-caption">UMA PAUSA, MUITAS POSSIBILIDADES</span></div>
+    </section>
+    <div class="ribbon" aria-hidden="true"><span>CAFÉ FRESQUINHO</span><i>✳</i><span>CONVERSA BOA</span><i>✳</i><span>PAUSA MERECIDA</span><i>✳</i><span>CAFÉ FRESQUINHO</span><i>✳</i><span>CONVERSA BOA</span></div>
+    <section class="menu-section wrap" id="cardapio" aria-labelledby="menu-title">
+      <div class="section-heading"><div><p class="eyebrow">ESCOLHA A SUA PAUSA</p><h2 id="menu-title">Tem um favorito<br><em>esperando por você.</em></h2></div><p>Cafés clássicos, novas combinações<br>e acompanhamentos que fazem o dia.</p></div>
+      <div class="menu-toolbar"><div class="categories" role="group" aria-label="Categorias do cardápio"><button class="selected" aria-pressed="true" data-category="all">Todos <span>8</span></button><button aria-pressed="false" data-category="coffee">Cafés</button><button aria-pressed="false" data-category="special">Especiais</button><button aria-pressed="false" data-category="bakery">Da padaria</button></div><label class="search"><span class="search-icon" aria-hidden="true"></span><span class="sr-only">Buscar no cardápio</span><input type="search" id="menu-search" placeholder="O que você quer saborear?" maxlength="100"></label></div>
+      <p id="menu-result" class="menu-result" aria-live="polite">8 itens no cardápio · valores ilustrativos</p>
+      <div class="menu-grid" id="menu-grid"></div>
+      <div class="menu-footnote"><span class="asterisk" aria-hidden="true">✳</span><p><b>Uma experiência demonstrativa, do começo ao fim.</b> Os itens, preços e combinações são fictícios. A sacola apenas simula um pedido, sem envio, cobrança ou entrega.</p><button class="text-button" id="manage-open">Experimentar edição do cardápio <span aria-hidden="true">↗</span></button></div>
+    </section>
+    <section class="experience" id="experiencia"><div class="wrap experience-inner"><div><p class="eyebrow">O DIGITAL TAMBÉM PODE SER ACOLHEDOR</p><h2>Simples de escolher.<br><em>Fácil de atualizar.</em></h2></div><div class="experience-copy"><p>Este conceito mostra como um site pode apresentar a personalidade de um negócio e deixar seu cardápio sempre à mão.</p><div class="experience-points"><span><b>01</b> Navegação pelo celular</span><span><b>02</b> Busca e categorias</span><span><b>03</b> Edição demonstrativa</span></div><button class="button light" data-open="project-dialog">Quero um projeto assim <span aria-hidden="true">↗</span></button></div></div></section>
+  </main>
+  <footer class="site-footer wrap"><a class="footer-brand" href="#inicio">café aurora<span aria-hidden="true">✳</span></a><p>Um conceito fictício para demonstrar possibilidades reais.<br>Não representa uma cafeteria ou cliente atendido.</p><button class="text-button" data-open="about-dialog">Sobre esta demonstração ↗</button></footer>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+
+  <dialog id="cart-dialog" class="modal cart-modal" aria-labelledby="cart-title"><header class="modal-head"><div><p class="eyebrow">DEMONSTRAÇÃO — NEGÓCIO FICTÍCIO</p><h2 id="cart-title">Sua pausa.</h2></div><button class="close-button" data-close aria-label="Fechar pedido simulado">×</button></header><p class="modal-intro">Esta sacola é uma simulação. Nada será enviado, cobrado ou preparado.</p><div id="cart-items"></div><div class="cart-total"><span>Subtotal ilustrativo</span><strong id="cart-total">R$ 0,00</strong></div><button class="button dark full" id="finish-simulation">Concluir simulação <span aria-hidden="true">↗</span></button><p class="simulation-result" id="simulation-result" role="status" hidden>Simulação concluída! Nenhum pedido foi enviado e nenhum pagamento foi solicitado.</p></dialog>
+
+  <dialog id="manage-dialog" class="modal manage-modal" aria-labelledby="manage-title"><header class="modal-head"><div><p class="eyebrow">DEMONSTRAÇÃO — NEGÓCIO FICTÍCIO</p><h2 id="manage-title">Seu cardápio, em dia.</h2></div><button class="close-button" data-close aria-label="Fechar edição demonstrativa">×</button></header><p class="modal-intro"><b>Painel de demonstração, sem login.</b> As alterações afetam somente este navegador. Um painel real exige autenticação, permissões e banco de dados.</p><form id="manage-form"><div id="manage-fields"></div><div class="manage-actions"><button type="button" class="text-button" id="reset-menu">Restaurar exemplo original</button><button class="button dark" type="submit">Salvar neste navegador <span aria-hidden="true">↗</span></button></div><p class="form-error" id="manage-error" role="alert" hidden></p></form></dialog>
+
+  <dialog id="about-dialog" class="modal info-modal" aria-labelledby="about-title"><header class="modal-head"><div><p class="eyebrow">DEMONSTRAÇÃO — NEGÓCIO FICTÍCIO</p><h2 id="about-title">Um exemplo.<br>Muitas possibilidades.</h2></div><button class="close-button" data-close aria-label="Fechar informações da demonstração">×</button></header><p>O Café Aurora foi criado como demonstração conceitual de site e cardápio digital. Nome, produtos, preços e identidade visual são fictícios; não representam cliente atendido.</p><ul class="info-list"><li>Explore categorias e busque produtos.</li><li>Monte um pedido simulado, sem envio ou pagamento.</li><li>Experimente editar preços e disponibilidade apenas neste navegador.</li></ul><p class="notice">Não há restaurante, endereço, telefone, atendimento, conta de cliente ou sistema de pedidos reais associado a esta demonstração.</p></dialog>
+
+  <dialog id="project-dialog" class="modal info-modal" aria-labelledby="project-title"><header class="modal-head"><div><p class="eyebrow">DEMONSTRAÇÃO — NEGÓCIO FICTÍCIO</p><h2 id="project-title">Como seria<br>no seu negócio?</h2></div><button class="close-button" data-close aria-label="Fechar informações sobre projeto">×</button></header><p>Uma versão real começa entendendo seu atendimento, seus produtos e quem atualizará o conteúdo. A proposta define o que será entregue, prazos, custos e suporte.</p><ol class="info-list"><li>Entender o fluxo e confirmar a necessidade.</li><li>Definir páginas, conteúdo e integrações.</li><li>Combinar preço, entrega e manutenção opcional.</li></ol><p class="notice">Este botão demonstra a apresentação comercial. Não envia mensagens nem coleta seus dados. O canal profissional será configurado somente quando o responsável aprovar a publicação.</p><button class="button dark full" id="copy-project">Copiar roteiro de interesse <span aria-hidden="true">↗</span></button><p id="copy-feedback" role="status" hidden></p></dialog>
+</body>
+</html>
