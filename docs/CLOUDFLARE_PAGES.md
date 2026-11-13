@@ -13,7 +13,14 @@ main → GitHub Actions (valida e gera arquivos públicos)
          └── Pages: demonstração Café Aurora
 ```
 
-Os nomes dos dois projetos Pages e seus endereços `pages.dev` ainda precisam ser confirmados no painel. Não trate os domínios personalizados como publicados até verificar DNS, certificado e conteúdo. Este guia não inclui IDs de conta, credenciais ou cópias de backups.
+Os dois projetos já foram publicados, com HTML e recursos conferidos por HTTPS:
+
+| Projeto Pages | Endereço temporário |
+| --- | --- |
+| `paulovictorrn-portfolio` | [Portfólio e bio](https://paulovictorrn-portfolio.pages.dev/) |
+| `paulovictorrn-cafe-demo` | [Café Aurora](https://paulovictorrn-cafe-demo.pages.dev/) |
+
+Os controles foram conferidos nos dois projetos: produção automática em `hostinger-deploy` e previews `None`. A delegação DNS foi salva na registradora em 13/11/2026 e ainda aguarda reconhecimento para associar os domínios personalizados. Não trate esses domínios como publicados até verificar certificado e conteúdo. Este guia não inclui IDs de conta, credenciais ou cópias de backups.
 
 ## 2. Criar dois projetos Pages no mesmo repositório
 
