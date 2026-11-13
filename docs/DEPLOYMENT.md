@@ -1,8 +1,10 @@
-# Publicação do portfólio na Hostinger
+# Publicação — referência e alternativa Hostinger
 
-**Estado em 13/11/2026: repositório público criado e GitHub Actions validado.** Após autorização de Paulo, as 16 fontes revisadas foram enviadas a [paulovrn12/portfolio-publico](https://github.com/paulovrn12/portfolio-publico). A [primeira execução](https://github.com/paulovrn12/portfolio-publico/actions/runs/43501109764) concluiu os jobs `validate` e `publish` com sucesso e gerou `hostinger-deploy` com nove recursos estáticos e o marcador de origem. Isso confirma a geração no GitHub; a conexão da Hostinger e a publicação no domínio ainda estão pendentes. Nenhum DNS foi alterado.
+**Fluxo atual aprovado: [GitHub Actions → Cloudflare Pages](CLOUDFLARE_PAGES.md).** Dois projetos Pages consomem a branch gerada `hostinger-deploy`, cujo nome legado será preservado. A Hostinger permanece como registradora e provedora de e-mail. Consulte o guia atual para configurar os projetos e preservar o DNS durante a delegação.
 
-**Limitação confirmada nesta sessão:** o hPanel mostra o Premium como “Teste grátis”; as entradas de criação/importação Git conduziram ao Builder/one-pager temporário, sem um painel de hospedagem PHP/HTML acessível. Portanto, a integração descrita abaixo é a arquitetura proposta, condicionada à confirmação de suporte no produto ativo. Não foi contratado outro plano nem publicada uma página temporária. Não compre uma hospedagem para seguir este guia sem antes avaliar essa limitação.
+**Geração confirmada em 13/11/2026:** as 16 fontes inicialmente revisadas foram enviadas a [paulovrn12/portfolio-publico](https://github.com/paulovrn12/portfolio-publico). A [primeira execução](https://github.com/paulovrn12/portfolio-publico/actions/runs/43501109764) concluiu `validate` e `publish`, gerando nove recursos estáticos e o marcador. Isso confirma o GitHub, não a publicação final dos domínios.
+
+**Alternativa histórica bloqueada:** o hPanel mostra o Premium como “Teste grátis”; criação/importação Git e upload conduziram ao Builder/one-pager temporário, sem um painel de hospedagem PHP/HTML acessível. Não foi contratado outro plano nem publicada uma página temporária. As seções abaixo preservam a proposta anterior como referência e não são o procedimento ativo de implantação. Não compre uma hospedagem para executá-las.
 
 ## 1. Estrutura e limites
 

@@ -2,6 +2,8 @@
 
 Site estático sem dependências, fontes externas, rastreadores, formulários ou chamadas de API. A página principal fica em `/` e a página curta de links em `/bio/`.
 
+**Hospedagem aprovada: Cloudflare Pages**, com dois projetos acompanhando a branch estática `hostinger-deploy` gerada pelo GitHub Actions. O nome da branch é legado. A Hostinger continua como registradora e provedora de e-mail; sua opção de hospedagem de teste permaneceu bloqueada no Builder. Consulte o [guia atual de publicação](docs/CLOUDFLARE_PAGES.md); nomes dos projetos e URLs finais devem ser confirmados após a configuração.
+
 ## Dados profissionais
 
 Os dados estão centralizados em `site-data.js`. A apresentação usa informações declaradas no [README público do GitHub](https://github.com/paulovrn12/paulovrn12/blob/main/README.md), consultado em 13/11/2026. E-mail profissional, WhatsApp e Instagram foram explicitamente autorizados pelo operador nesta conversa. Não há renda, vínculo familiar, credenciais, detalhes de repositórios privados, métricas inventadas ou alegações de clientes atendidos.
@@ -16,6 +18,6 @@ Em localhost, o cartão utiliza `/demos/cafe-conceito/`. Fora de localhost, o en
 
 ## Separação do Radar
 
-Este diretório deve conter somente conteúdo público. Não copiar arquivos de ambiente, dados de contatos, banco, backups, configuração pessoal ou código privado do CRM para ele. O workflow em `.github/workflows/` e os scripts geram uma branch estática exclusiva; consulte [publicação e limites atuais](docs/DEPLOYMENT.md). A integração real ainda não foi ativada.
+Este diretório deve conter somente conteúdo público. Não copiar arquivos de ambiente, dados de contatos, banco, backups, configuração pessoal ou código privado do CRM para ele. O workflow em `.github/workflows/` e os scripts geram uma branch estática exclusiva; consulte o [guia Cloudflare Pages](docs/CLOUDFLARE_PAGES.md) e o [histórico da alternativa Hostinger](docs/DEPLOYMENT.md). A publicação final exige validação dos dois projetos e dos domínios.
 
 Arquivos do site: `index.html`, `bio/index.html`, `styles.css`, `site.js`, `site-data.js`, e os recursos da demonstração. Os links sociais são navegação, não coleta de credenciais.
