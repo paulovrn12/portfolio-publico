@@ -20,7 +20,9 @@ Os dois projetos já foram publicados, com HTML e recursos conferidos por HTTPS:
 | `paulovictorrn-portfolio` | [Portfólio e bio](https://paulovictorrn-portfolio.pages.dev/) |
 | `paulovictorrn-cafe-demo` | [Café Aurora](https://paulovictorrn-cafe-demo.pages.dev/) |
 
-Os controles foram conferidos nos dois projetos: produção automática em `hostinger-deploy` e previews `None`. A delegação DNS foi salva na registradora em 13/11/2026 e ainda aguarda reconhecimento para associar os domínios personalizados. Não trate esses domínios como publicados até verificar certificado e conteúdo. Este guia não inclui IDs de conta, credenciais ou cópias de backups.
+**Domínios publicados em 13/11/2026:** [homepage](https://paulovictorrn.tech/), [bio](https://paulovictorrn.tech/bio/) e [Café Aurora](https://cafe-demo.paulovictorrn.tech/). Os três endereços responderam HTTP 200 com os títulos esperados; os dois domínios constam como `Active` e `SSL enabled` no Pages. Os nove registros de e-mail da Hostinger foram preservados e conferidos por DNS público. Não foi realizado envio ou recebimento de e-mail de teste.
+
+Os controles foram conferidos nos dois projetos: produção automática em `hostinger-deploy` e previews `None`. A atualização do commit `98b190a8973c2f7ab66acc64ff1a5cc47c515e02` percorreu GitHub Actions, branch gerada e ambos os projetos Pages; o marcador da homepage e o `noindex` da demonstração confirmaram a versão servida. Este guia não inclui IDs de conta, credenciais ou cópias de backups.
 
 ## 2. Criar dois projetos Pages no mesmo repositório
 
@@ -72,3 +74,4 @@ Esses cuidados seguem o [procedimento de zona completa](https://developers.cloud
 - Fazer a próxima alteração revisada em `main` e comprovar a sequência Actions → branch gerada → ambos os projetos Pages. Um job verde no GitHub sozinho não comprova atualização dos domínios finais.
 
 O Radar, seu banco PostgreSQL, contatos de prospecção e configurações locais continuam fora deste repositório e desta hospedagem. Alterações futuras seguem o workflow já existente; não editar manualmente `hostinger-deploy` e não cadastrar segredos Cloudflare no GitHub para esta integração.
+
