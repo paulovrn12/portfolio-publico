@@ -1,4 +1,4 @@
-import { siteData, demonstrationUrl } from './site-data.js';
+import { siteData, demonstrationUrl } from './site-data.js?v=20261114-projetos';
 
 const $all = selector => document.querySelectorAll(selector);
 const safeUrl = value => { if (typeof value !== 'string' || !value.trim()) return null; try { const url = new URL(value, location.href); return ['http:', 'https:'].includes(url.protocol) && !url.username && !url.password ? url.href : null; } catch { return null; } };
