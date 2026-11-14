@@ -68,6 +68,10 @@ test('links locais devem existir; JavaScript e destinos de cartões devem ser v�
   await assert.rejects(validateSite(root), /Protocolo de URL não permitido/);
   await put(root, 'site-data.js', "export const siteData = { link: buildUrl() };");
   await assert.rejects(validateSite(root), /Destino dinâmico/);
+  await put(root, 'site-data.js', "export const siteData = { secondaryLink: 'https://user:secret@example.invalid/' };");
+  await assert.rejects(validateSite(root), /credenciais/);
+  await put(root, 'site-data.js', "export const siteData = { secondaryLink: 'javascript:alert(1)' };");
+  await assert.rejects(validateSite(root), /Protocolo de URL não permitido/);
 });
 
 test('URLs impedem saída da raiz, credenciais, esquemas ativos e recursos remotos', () => {

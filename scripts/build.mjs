@@ -75,7 +75,7 @@ export async function validateSite(rawRoot = DEFAULT_ROOT) {
       for (const match of content.matchAll(/(?:\b(?:import|export)\s+(?:[^;\n]*?\s+from\s+)?|\bimport\s*\(\s*)['"]([^'"]+)['"]/g)) check(name, match[1]);
       if (name === 'site-data.js') {
         // Os destinos dos cartões devem ser literais revisáveis, sem execução do módulo durante o build.
-        for (const field of content.matchAll(/\b(github|linkedin|whatsapp|instagram|website|demoUrl|demoPreviewPath|link|image|source)\s*:\s*/g)) {
+        for (const field of content.matchAll(/\b(github|linkedin|whatsapp|instagram|website|demoUrl|demoPreviewPath|link|secondaryLink|image|source)\s*:\s*/g)) {
           const literal = content.slice(field.index + field[0].length).match(/^(['"])([^'"\r\n]*)\1/);
           if (!literal || literal[2].includes('\\')) throw new Error(`Destino dinâmico ou escapado em site-data.js: ${field[1]}`);
           check(name, literal[2], field[1] !== 'image');
